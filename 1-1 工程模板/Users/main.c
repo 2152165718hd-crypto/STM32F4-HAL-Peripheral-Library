@@ -9,10 +9,10 @@ int main(void)
     sys_stm32_clock_init(336, 8, 2, 7);  /* 配置系统时钟：PLL锁相环参数配置，最终系统主频为168MHz */
     delay_init(168);                /* 初始化延时函数，参数为系统主频（168MHz），用于校准延时基准 */
     usart_init(115200);
-    printf("Hello，World");
+    
     while(1)
     {
-       
+       printf("Hello，World");
     }
 }
 
