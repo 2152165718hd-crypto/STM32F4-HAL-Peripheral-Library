@@ -2,7 +2,7 @@
 #include "./SYSTEM/usart/usart.h" // 串口相关头文件（本程序未实际使用，保留为工程通用包含）
 #include "./SYSTEM/delay/delay.h" // 延时功能头文件（提供delay_us/delay_ms函数）
 #include "./Hardware/LCD/LCD.h"
-
+#include "./Hardware/LCD/LCD_Data.h" 
 int main(void)
 {
     HAL_Init();                         /* 初始化HAL库（底层资源、SysTick定时器等） */
@@ -11,11 +11,8 @@ int main(void)
     usart_init(115200);
     printf("Hello，World");
     st7789_init();
-    st7789_clear(ST7789_COLOR_RED);
-    st7789_draw_char(10, 10, 'A', ST7789_COLOR_WHITE, ST7789_COLOR_RED, 4);
-    st7789_draw_string(60, 40, "Hello, World!", ST7789_COLOR_WHITE, ST7789_COLOR_RED, 2);
-    st7789_draw_line(0, 150, 240, 150, ST7789_COLOR_WHITE);
-    st7789_fill_rect(50, 160, 190, 220, ST7789_COLOR_BLUE);
+	st7789_clear(ST7789_COLOR_WHITE);
+    st7789_draw_bitmap565(0,0,213,320,gImage_6);
     while (1)
     {
 			
