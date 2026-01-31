@@ -12,7 +12,6 @@ int main(void)
     printf("Hello，World");
     st7789_init();
 	st7789_clear(ST7789_COLOR_WHITE);
-    st7789_draw_bitmap565(0,0,213,320,gImage_6);
     while (1)
     {
 			
