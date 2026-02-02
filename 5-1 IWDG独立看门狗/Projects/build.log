@@ -1,0 +1,12 @@
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Program Files (x86)\KEIL\MDK\ARM\ARMCC\Bin'
+Build target 'Template'
+compiling UART.c...
+..\Drivers\Hardware\UART\UART.c(17): error:  #256: invalid redeclaration of type name "UART_FrameTypeDef"  (declared at line 30 of "..\Drivers\./Hardware/UART/UART.h")
+  } UART_FrameTypeDef;
+..\Drivers\Hardware\UART\UART.c(225): error:  #147-D: declaration is incompatible with "void UART_FrameProcess(UART_FrameTypeDef *)"  (declared at line 41 of "..\Drivers\./Hardware/UART/UART.h")
+  void UART_FrameProcess(UART_FrameTypeDef *frame)
+..\Drivers\Hardware\UART\UART.c: 0 warnings, 2 errors
+compiling main.c...
+"..\Output\Objects\Project.axf" - 2 Error(s), 0 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:01

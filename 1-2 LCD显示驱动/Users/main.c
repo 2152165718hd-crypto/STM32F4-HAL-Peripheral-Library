@@ -11,7 +11,7 @@ int main(void)
     usart_init(115200);
     printf("Hello，World");
     st7789_init();
-	st7789_clear(ST7789_COLOR_WHITE);
+	st7789_demo();
     while (1)
     {
 			
